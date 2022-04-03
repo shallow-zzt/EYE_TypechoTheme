@@ -1,5 +1,5 @@
 # EYE_TypechoTheme
-制作的第一个比较完整的Typecho主题，虽然说很菜。https://www.mmcee.cn/244.html
+制作的第一个比较完整的Typecho主题，虽然说很菜。
 
 # EYE
 为啥起这个名字？其实这个名字是群友起的……起的也是很随便，因为在制作的时候测试用的缩略图是
