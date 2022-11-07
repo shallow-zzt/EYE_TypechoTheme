@@ -56,7 +56,7 @@ $this->need('header.php');
 
             </div>
 
-			<?php $this->need('archivesidebar.php'); ?>
+			<?php $this->need('sidebar.php'); ?>
         </div>
     </div>
 
