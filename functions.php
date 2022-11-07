@@ -33,6 +33,8 @@ function themeConfig($form) {
 	$form->addInput($morenimg);
 	$lodingimg = new Typecho_Widget_Helper_Form_Element_Text('lodingimg', NULL, NULL, _t('加载时所显示的图片'), _t('填写一个动图(.gif结尾的图片)。比如填写https://s2.ax1x.com/2020/03/04/3oYPJS.gif'));
 	$form->addInput($lodingimg);
+	$authorimg = new Typecho_Widget_Helper_Form_Element_Text('authorimg', NULL, NULL, _t('站长头像'), _t('填写一个图片链接。'));
+	$form->addInput($authorimg);
 	$filing = new Typecho_Widget_Helper_Form_Element_Text('filing', NULL, NULL, _t('备案信息'), _t('用于显示网站备案信息，不填则不显示备案信息'));
 	$form->addInput($filing);
 	$gafiling = new Typecho_Widget_Helper_Form_Element_Text('gafiling', NULL, NULL, _t('公安备案信息'), _t('用于显示网站公安备案信息，不填则不显示公安备案信息'));
@@ -59,6 +61,17 @@ function post_gravatar($user,$size,$default){
 	$url='https://cdn.v2ex.com/gravatar/';if (!empty($user->mail)) $url.=$mailHash;
 	$url.='?s='.$size;$url.='&r='.$rating;$url.='&d='.$default;
 	echo '<img class="avatar mdui-chip-icon mdui-color-grey-200" src="'.$url.'" alt="'.$user->screenName.'" width="'.$size.'" height="'.$size.'" />';
+}
+//获取头像
+function get_co_avatar($moe = NULL){
+  $email = strtolower($moe);
+  $qq = str_replace('@qq.com','',$email);
+  if(strstr($email,"qq.com") && is_numeric($qq) && strlen($qq) < 11 && strlen($qq) > 4){
+    $avatar = 'http://q1.qlogo.cn/g?b=qq&nk='.$qq.'&s=100';
+  }else{
+    $avatar = 'http://res.aquaia.xyz/pics/akarin.jpg';
+  }
+  echo $avatar;
 }
 function Table($content){
 	return preg_replace('/<\/table>/s','</table></div>',preg_replace('/<table>/s','<div style="overflow-x: auto;"><table class="fill">',$content));

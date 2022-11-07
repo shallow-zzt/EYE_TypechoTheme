@@ -23,7 +23,7 @@ $this->need('header.php');
             <div class="ht">
                 <h1 class="bgt" id="post"><?php $this->title() ?></h1>
 
-                <p > <i class="fa fa-user-circle"></i> <?php $this->author(); ?> /<i class="fa fa-calendar"></i> <?php $this->date(); ?> / <i class="fa fa-eye" ></i> <?php get_post_view($this) ?>  / <i class="fa fa-hashtag"></i> <?php $this->tags('/', true, 'none'); ?></p>
+                <h4> <i class="fa fa-user-circle"></i> <?php $this->author(); ?> | <i class="fa fa-calendar"></i> <?php $this->date(); ?> | <i class="fa fa-eye" ></i> <?php get_post_view($this) ?>  | <i class="fa fa-hashtag"></i> <?php $this->tags('/', true, 'none'); ?><h4>
             </div>
         </div>
     </div>
@@ -39,7 +39,9 @@ $this->need('header.php');
 
                     <div class="post-card">
                         <article>
+                             <h1 id="postxs" id="post" style="text-align: center;"><?php $this->title() ?></h1>
 
+                     <p id="postxs" style="text-align: center;"> <i class="fa fa-user-circle"></i> <?php $this->author(); ?> | <i class="fa fa-calendar"></i> <?php $this->date(); ?> | <i class="fa fa-eye" ></i> <?php get_post_view($this) ?>  | <i class="fa fa-hashtag"></i> <?php $this->tags('/', true, 'none'); ?></p>
                             <?php echo RewriteContent($this->content); ?> 
 
                         </article>
@@ -50,21 +52,11 @@ $this->need('header.php');
                 </div>
                 
 <?php $this->need('comments.php'); ?>
-<div class="col-l-12" id="poslist">
-        <div class="post-card">
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4115322372627995"
-        data-ad-slot="5403047255" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-        </div>
-
-       </div>        
+    
 
             </div>
 
-			<?php $this->need('sidebar.php'); ?>
+			<?php $this->need('archivesidebar.php'); ?>
         </div>
     </div>
 

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * 友链页面
+ * 吐槽页面
  *
  * @package custom
  */
@@ -14,7 +14,7 @@ $this->need('header.php');
 
         echo $this->fields->thumb;
     } else {
-        echo  $this->options->morenimg;
+        echo  $this->options->toutulink;
     }
 
 

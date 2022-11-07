@@ -25,7 +25,8 @@
         <div id="<?php $comments->theId(); ?>">
             <div id="comments">
                 <div id="commentauthor">
-                    <img class="commentimg"   src="<?php xiaobian($comments, 100, 'mystery'); ?>" ks-original="<?php xiaobian($comments, 100, 'mystery'); ?>" alt="">
+                    <img class="commentimg"  <?php if ($comments->authorId == $comments->ownerId) {echo "style=\"border: 5px solid rgb(103, 179, 231);\"";}?> src="<?php if ($comments->authorId == $comments->ownerId) {echo "http://res.aquaia.xyz/pics/head.png";} 
+                    else{get_co_avatar($comments->mail);}?>" ks-original="<?php if ($comments->authorId == $comments->ownerId) {echo "http://res.aquaia.xyz/pics/head.png";} else{get_co_avatar( $comments->mail);} ?>" alt="">
                     <cite class="fn"><?php $comments->author(); ?></cite>
 
 
@@ -36,10 +37,10 @@
                     <div class="biaoshi">
                         <?php if ($comments->authorId == $comments->ownerId) { ?>
 
-                            <em>博主</em>
+                            <em>水母</em>
                         <?php } else { ?>
 
-                            <div class="mdui-chip-title">访客</div>
+                            <em style='background:#A8DADF;'>纸卷</em>
                         <?php } ?>
                     </div>
 
@@ -151,9 +152,9 @@
             <?php endif; ?>
         <?php else : ?>
             <div class="col-l-12" id="poslist">
-                <div class="post-card juzhong">
-                    <h2><?php _e('评论已关闭'); ?></h2>
-                </div>
+                <?php _e('<div class="post-card juzhong">
+                    <h2>评论功能已经关闭了喵~</h2>
+                </div>'); ?>
             </div>
         <?php endif; ?>
             </div>

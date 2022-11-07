@@ -7,7 +7,7 @@ $this->need('header.php');
 
         echo $this->fields->thumb;
     } else {
-        echo  $this->options->morenimg;
+        echo  $this->options->toutulink;
     }
 
 

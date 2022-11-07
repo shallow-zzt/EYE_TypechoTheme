@@ -11,16 +11,16 @@
                         <?php if ($this->options->gafiling) { ?><p><img
                             src="<?php echo $this->options->lodingimg; ?>" ks-original="<?php Helper::options()->themeUrl(); ?>/img/gaba.png" /><?php echo $this->options->gafiling; ?></p>
                         <?php } ?>
-                        <p> Powered by <a href="http://typecho.org" target="_blank">Typecho</a> Theme <a href="https://www.mmcee.cn/244.html" target="_blank">EYE</a></p>
+                        <p> Powered by <a href="http://typecho.org" target="_blank">Typecho</a> Theme <a href="https://www.mmcee.cn/244.html" target="_blank">EYE</a> Modified by <a href="http://blog.aquarium.moe" target="_blank">Shallowaq</a></p>
                         <?php if ($this->options->upyuncdn=='true') { ?>
                          <p><a href="https://www.upyun.com/" target="_blank"><img
                             src="<?php echo $this->options->lodingimg; ?>" ks-original="<?php Helper::options()->themeUrl(); ?>/img/upyun.png" alt="upyun" height=28 /></a></p>
                     <?php } ?>
-                        <p><?php echo $this->options->jieshao; ?></p>
                     </div>
                 </div>
             </div>
         </div>
+
 
     </footer>
 
@@ -65,4 +65,21 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 </script>
+<script>    
+var OriginTitile = document.title;    
+var titleTime;  
+document.addEventListener('visibilitychange', function(){  
+    if (document.hidden){  
+        document.title ='你快回来~~嘤嘤嘤'; 
+        clearTimeout(titleTime);  
+    }else{  
+        document.title = '欢迎回家！';  
+        titleTime = setTimeout(function() {  
+            document.title = OriginTitile;  
+        }, 1000); 
+    }  
+});  
+</script>
+
+
 </html>

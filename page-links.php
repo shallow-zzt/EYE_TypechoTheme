@@ -14,7 +14,7 @@ $this->need('header.php');
 
         echo $this->fields->thumb;
     } else {
-        echo  $this->options->morenimg;
+        echo  $this->options->toutulink;
     }
 
 
@@ -29,7 +29,7 @@ $this->need('header.php');
 
             <div class="ht">
                 <h1 class="bgt" id="post"><?php $this->title() ?></h1>
-                <p> 盆友们~</p>
+                <p> 我的小可爱都会记录在漂流瓶的纸卷里的呢……~</p>
 
             </div>
         </div>
@@ -69,15 +69,8 @@ $this->need('header.php');
                     </div>
 
                 </div>
-                <div class="col-l-12" id="poslist">
 
-                    <div class="post-card">
-                        <article>
-                            <?php echo RewriteContent($this->content); ?> </article>
-                    </div>
 
-                </div>
-                <?php $this->need('comments.php'); ?>
             </div>
 
         </div>

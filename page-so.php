@@ -14,7 +14,7 @@ $this->need('header.php');
 
         echo $this->fields->thumb;
     } else {
-        echo  $this->options->morenimg;
+        echo $this->options->toutulink;
     }
 
 
@@ -47,8 +47,7 @@ $this->need('header.php');
                             <form class="ks-form" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
                                 <select class="mdui-select" name="cat">
                                     <option value="0" selected>全部</option>
-                                    <option value="这里是分类MID">这里请到后台修改</option>
-									<option value="这里是分类MID">这里请到后台修改</option>
+
                                 </select>
                                 <input style="width: 60%;"  type="text" name="ss" placeholder="输入关键字以回车开始搜索">
                             </form>

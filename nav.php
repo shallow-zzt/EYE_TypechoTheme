@@ -15,9 +15,15 @@
 
 					<!-- Structure -->
 					<nav class="the-nav nav-collapse clearfix">
-						<ul class="nav nav-pill pull-left">
-							<li><a href="/">首页</a></li>
-							
+						<ul class="nav nav-pill pull-left" style="font-family:'lolita','Microsoft YaHei',tahoma,arial,'Hiragino Sans GB';">
+							<li><a href="/"><i class="fa fa-home" aria-hidden="true"></i>首页</a></li>
+							<li><a href="https://game.aquarium.moe"><i class="fas fa-dice-six"></i>小游戏站</a></li>
+							<li class="dropdown">
+								<a href="javascript:void(0);"><i class="fas fa-tools"></i>小工具 <b class="caret"></b></a>
+								<ul class="subnav">
+                                        <li><a href="http://random.aquarium.moe">随机数生成器</a></li> 
+								</ul>
+							</li>							
 								<?php $this->widget('Widget_Metas_Category_List')->to($category);
 								$last = -1; ?>
 
@@ -49,14 +55,17 @@
 
 
 						</ul>
-						<ul class="nav nav-pill pull-right">
+						<ul class="nav nav-pill pull-right" style="font-family:'lolita','Microsoft YaHei',tahoma,arial,'Hiragino Sans GB';">
 
-<li><a href="/soso.html">搜索</a></li>
+                <li><a href="/index.php/search.html"><i class="fa fa-search"></i>搜索</a></li>
+                <li><a href="/admin/login.php"><i class="fa fa-sign-in-alt"></i>登录</a></li>                
+                <li><a href="/index.php/msg.html"><i class="fa fa-edit"></i>留言板</a></li>
+                <li><a href="/index.php/links.html"><i class="fa fa-link" ></i>小纸卷</a></li>                
 							<li class="dropdown">
-								<a href="javascript:void(0);">更多 <b class="caret"></b></a>
+								<a href="javascript:void(0);"><i class="fas fa-info-circle"></i>更多 <b class="caret"></b></a>
 								<ul class="subnav">
-								<?php $this->widget('Widget_Contents_Page_List')
-               ->parse('<li ><a href="{permalink}">{title}</a></li>'); ?>
+                                        <li><a href="/index.php/aboutme.html">关于</a></li> 
+                                        <li><a href="/index.php/donate.html">投食</a></li>  
 								</ul>
 							</li>
 						</ul>

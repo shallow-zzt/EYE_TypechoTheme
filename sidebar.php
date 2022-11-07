@@ -1,8 +1,9 @@
+<div class="show-on-mobile">
 <div class="col-l-4" id="postx">
                 <div class="col-l-12" id="poslist">
                     <div class="post-card" id="zuozhe">
 
-                        <img class="zuozhe-touxiang" src="<?php echo $this->options->lodingimg; ?>" ks-original="<?php xiaobian($this->author, 100, 'mystery'); ?>" alt="">
+                        <img class="zuozhe-touxiang" src="<?php echo $this->options->lodingimg; ?>" ks-original="<?php echo $this->options->authorimg; ?>" alt="">
                         <h2 style="text-align: center; line-height:50px"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a> </h2>
                         <p><?php echo $this->options->jieshao; ?></p>
                     </div>
@@ -97,7 +98,7 @@
                 <div class="col-l-12" id="poslist">
                     <div class="post-card">
 
-                        <h3 style="text-align: center; line-height:50px">归档</h3>
+                        <h3 style="text-align: center; line-height:50px"><i class="fa fa-book" aria-hidden="true"></i>归档</h3>
                         <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=Y年n月')->parse('
                     <a href="{permalink}">
                     <div class="card" style="height: 50px; width: 100%;margin-bottom: 10px;">
@@ -111,12 +112,8 @@
 		<div class="col-l-12" id="poslist">
                     <div class="post-card">
 
-                        <h3 style="text-align: center; line-height:50px">(支持就戳一下吧QAQ)</h3>
-                        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4115322372627995"
-                        data-ad-slot="5403047255" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                        <h3 style="text-align: center; line-height:50px"><i class="fa fa-bar-chart" aria-hidden="true"></i>浏览统计</h3>
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5ijmh5orm2g&amp;m=7&amp;c=ff0000&amp;cr1=ffffff&amp;f=comic_sans_ms&amp;l=0" async="async"></script>
 				
 
                     </div>
@@ -126,3 +123,4 @@
 
 
             </div>
+   </div>      
