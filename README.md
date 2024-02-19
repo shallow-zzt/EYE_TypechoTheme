@@ -1,2 +1,3 @@
 基于 EYE_TypechoTheme 魔改的用于个人博客的typecho主题
 
+相比原来的版本，修改了一些bug以及新增了功能等
